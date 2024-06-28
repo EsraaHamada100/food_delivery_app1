@@ -1,3 +1,5 @@
+import 'package:equatable/equatable.dart';
+
 class Product {
   int? _totalSize;
   int? _typeId;
@@ -27,7 +29,7 @@ class Product {
   }
 }
 
-class ProductModel {
+class ProductModel extends Equatable {
   late int id;
   String? name;
   String? description;
@@ -50,7 +52,7 @@ class ProductModel {
     required this.updatedAt,
     required this.typeId,
   });
-  ProductModel.fromJson(Map<String, dynamic> json){
+  ProductModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     description = json['description'];
@@ -76,4 +78,7 @@ class ProductModel {
       'type_id': typeId,
     };
   }
+
+  @override
+  List<Object?> get props => [id, name];
 }

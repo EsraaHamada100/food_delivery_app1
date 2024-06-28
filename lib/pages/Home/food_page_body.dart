@@ -92,7 +92,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       size: const Size.square(9.0),
                       activeSize: const Size(18.0, 9.0),
                       activeShape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(AppRadius.r5),
+                        borderRadius: BorderRadius.circular(AppSize.s5),
                       ),
                     ),
                   )
@@ -103,21 +103,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         SizedBox(height: AppHeight.h30),
         // Popular text container
         Container(
-          margin: EdgeInsets.only(left: AppMargin.m30),
+          margin: EdgeInsets.only(left: AppSize.s30),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               BigText(text: "Recommended"),
               SizedBox(width: AppWidth.w10),
               Container(
-                margin: EdgeInsets.only(bottom: AppMargin.m3),
+                margin: EdgeInsets.only(bottom: AppSize.s3),
                 child: BigText(
                   text: ".",
                 ),
               ),
               SizedBox(width: AppWidth.w10),
               Container(
-                margin: EdgeInsets.only(bottom: AppMargin.m2),
+                margin: EdgeInsets.only(bottom: AppSize.s2),
                 child: SmallText(text: "Food pairing"),
               ),
             ],
@@ -139,9 +139,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       },
                       child: Container(
                         margin: EdgeInsets.only(
-                          left: AppMargin.m20,
-                          right: AppMargin.m20,
-                          top: AppMargin.m20,
+                          left: AppSize.s20,
+                          right: AppSize.s20,
+                          top: AppSize.s20,
                         ),
                         child: Row(
                           children: [
@@ -151,7 +151,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               height: AppHeight.h130,
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.circular(AppRadius.r5),
+                                    BorderRadius.circular(AppSize.s5),
                                 color: Colors.white38,
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
@@ -171,12 +171,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(AppRadius.r20),
-                                    bottomRight: Radius.circular(AppRadius.r20),
+                                    topRight: Radius.circular(AppSize.s20),
+                                    bottomRight: Radius.circular(AppSize.s20),
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(AppPadding.p10),
+                                  padding: EdgeInsets.all(AppSize.s10),
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -279,7 +279,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               height: AppValues.pageViewContainer,
               margin: const EdgeInsets.only(left: 10, right: 10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppRadius.r30),
+                borderRadius: BorderRadius.circular(AppSize.s30),
                 color:
                     index.isEven ? const Color(0xFF69C5DF) : const Color(0xFF9294CC),
                 image: DecorationImage(
@@ -297,12 +297,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             child: Container(
               height: AppValues.pageViewDetailsContainer,
               margin: EdgeInsets.only(
-                left: AppMargin.m30,
-                right: AppMargin.m30,
-                bottom: AppMargin.m30,
+                left: AppSize.s30,
+                right: AppSize.s30,
+                bottom: AppSize.s30,
               ),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppRadius.r20),
+                borderRadius: BorderRadius.circular(AppSize.s20),
                 color: Colors.white,
                 // here we make a shadow in the center middle only
                 boxShadow: const [
@@ -329,10 +329,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
               child: Container(
                 padding: EdgeInsets.only(
-                    top: AppPadding.p10,
-                    right: AppPadding.p10,
-                    left: AppPadding.p10,
-                    bottom: AppPadding.p5),
+                    top: AppSize.s10,
+                    right: AppSize.s10,
+                    left: AppSize.s10,
+                    bottom: AppSize.s5),
                 child: FoodDetailsColumn(text: popularProduct.name!),
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'controllers/cart_controller.dart';
@@ -29,12 +30,20 @@ class MyApp extends StatelessWidget {
     Get.find<PopularProductController>().getPopularProductList();
     Get.find<RecommendedProductController>().getRecommendedProductList();
     Get.find<CartController>().getStoredCartItems();
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      // home:  MainFoodPage(),
-      initialRoute: RouteHelper.getSplashPage(),
-      getPages: RouteHelper.routes,
+    print(MediaQuery.of(context).size);
+    return ScreenUtilInit(
+      designSize: const Size(411.4, 867.4),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          // home:  MainFoodPage(),
+          initialRoute: RouteHelper.getSplashPage(),
+          getPages: RouteHelper.routes,
+        );
+      }
     );
   }
 }

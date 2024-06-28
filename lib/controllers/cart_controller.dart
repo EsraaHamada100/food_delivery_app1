@@ -1,3 +1,4 @@
+import 'package:food_delivery_app/models/cart_history_model.dart';
 import 'package:food_delivery_app/models/products_model.dart';
 import 'package:get/get.dart';
 
@@ -12,6 +13,8 @@ class CartController extends GetxController {
   Map<int, CartModel> get items => _items;
 
   void getStoredCartItems() {
+    // cartRepo.clearCartList();
+    // cartRepo.clearCartHistoryList();
     List<CartModel> cartList = cartRepo.getCartList();
     if (_items.isEmpty) {
       for (CartModel cartModel in cartList) {
@@ -26,7 +29,7 @@ class CartController extends GetxController {
       product: product,
       quantity: quantity,
       isExist: true,
-      time: DateTime.now().toString(),
+      // time: DateTime.now().toString(),
     );
     if (quantity == 0) {
       // if the items doesn't exist it will return null so no exceptions will be thrown
@@ -64,10 +67,14 @@ class CartController extends GetxController {
   }
 
   void checkOut(){
-    cartRepo.addToHistoryCartListLocalStorage();
+    cartRepo.addToCartHistoryListLocalStorage();
     cartRepo.clearCartList();
     _items.clear();
     update();
+  }
+
+  List<CartHistoryModel> getCartHistoryList() {
+    return cartRepo.getCartHistoryList();
   }
 
   int get totalItems {

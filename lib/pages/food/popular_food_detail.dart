@@ -127,8 +127,8 @@ class PopularFoodDetails extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(AppRadius.r20),
-                    topRight: Radius.circular(AppRadius.r20),
+                    topLeft: Radius.circular(AppSize.s20),
+                    topRight: Radius.circular(AppSize.s20),
                   ),
                 ),
                 child: Column(
@@ -153,21 +153,21 @@ class PopularFoodDetails extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         height: AppHeight.h120,
-        padding: EdgeInsets.all(AppPadding.p20),
+        padding: EdgeInsets.all(AppSize.s20),
         decoration: BoxDecoration(
           color: ColorManager.buttonBackgroundColor,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(AppRadius.r40),
-            topRight: Radius.circular(AppRadius.r40),
+            topLeft: Radius.circular(AppSize.s40),
+            topRight: Radius.circular(AppSize.s40),
           ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              padding: EdgeInsets.all(AppPadding.p20),
+              padding: EdgeInsets.all(AppSize.s20),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppRadius.r20),
+                borderRadius: BorderRadius.circular(AppSize.s20),
                 color: Colors.white,
               ),
               child: Row(
@@ -207,9 +207,9 @@ class PopularFoodDetails extends StatelessWidget {
                 productController.addItem(product);
               },
               child: Container(
-                padding: EdgeInsets.all(AppPadding.p20),
+                padding: EdgeInsets.all(AppSize.s20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(AppRadius.r20),
+                  borderRadius: BorderRadius.circular(AppSize.s20),
                   color: ColorManager.mainColor,
                 ),
                 child: BigText(

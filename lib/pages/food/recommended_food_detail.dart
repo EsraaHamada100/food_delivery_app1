@@ -65,14 +65,14 @@ class RecommendedFoodDetail extends StatelessWidget {
                 child: Container(
                   width: double.maxFinite,
                   padding: EdgeInsets.only(
-                    top: AppPadding.p5,
-                    bottom: AppPadding.p10,
+                    top: AppSize.s5,
+                    bottom: AppSize.s10,
                   ),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(AppRadius.r15),
-                        topRight: Radius.circular(AppRadius.r15),
+                        topLeft: Radius.circular(AppSize.s15),
+                        topRight: Radius.circular(AppSize.s15),
                       )),
                   child: Center(
                     child: BigText(text: product.name!, size: FontSize.s26),
@@ -99,7 +99,7 @@ class RecommendedFoodDetail extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
+                padding: EdgeInsets.symmetric(horizontal: AppSize.s20),
                 child: ExpandableTextWidget(
                   text: product.description!,
                 ),
@@ -114,8 +114,8 @@ class RecommendedFoodDetail extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              horizontal: AppPadding.p50,
-              vertical: AppPadding.p10,
+              horizontal: AppSize.s50,
+              vertical: AppSize.s10,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -154,21 +154,21 @@ class RecommendedFoodDetail extends StatelessWidget {
           ),
           Container(
             height: AppHeight.h120,
-            padding: EdgeInsets.all(AppPadding.p20),
+            padding: EdgeInsets.all(AppSize.s20),
             decoration: BoxDecoration(
               color: ColorManager.buttonBackgroundColor,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(AppRadius.r40),
-                topRight: Radius.circular(AppRadius.r40),
+                topLeft: Radius.circular(AppSize.s40),
+                topRight: Radius.circular(AppSize.s40),
               ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: EdgeInsets.all(AppPadding.p20),
+                  padding: EdgeInsets.all(AppSize.s20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppRadius.r20),
+                    borderRadius: BorderRadius.circular(AppSize.s20),
                     color: Colors.white,
                   ),
                   child:
@@ -179,9 +179,9 @@ class RecommendedFoodDetail extends StatelessWidget {
                     productController.addItem(product);
                   },
                   child: Container(
-                    padding: EdgeInsets.all(AppPadding.p20),
+                    padding: EdgeInsets.all(AppSize.s20),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(AppRadius.r20),
+                      borderRadius: BorderRadius.circular(AppSize.s20),
                       color: ColorManager.mainColor,
                     ),
                     child: GetBuilder<ProductController>(builder: (context) {

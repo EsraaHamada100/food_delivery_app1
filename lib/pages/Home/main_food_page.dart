@@ -43,7 +43,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   width: AppWidth.w45,
                   height: AppHeight.h45,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppRadius.r15),
+                    borderRadius: BorderRadius.circular(AppSize.s15),
                     color: ColorManager.mainColor,
                   ),
                   child: const Icon(

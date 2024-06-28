@@ -10,7 +10,7 @@ class CartModel {
   // String? img;
   int quantity;
   late bool isExist;
-  String? time;
+  // String? time;
   CartModel({
     required this.id,
     required this.product,
@@ -19,7 +19,7 @@ class CartModel {
     // required this.img,
     required this.quantity,
     required this.isExist,
-    this.time,
+    // this.time,
   });
   factory CartModel.fromJson(Map<String, dynamic> json) {
     return CartModel(
@@ -30,7 +30,7 @@ class CartModel {
       // img: json['img'];
       quantity: int.parse(json['quantity']),
       isExist: json['isExist'],
-      time: json['time'],
+      // time: json['time'],
     );
   }
   Map<String, dynamic> toJson() {
@@ -39,7 +39,7 @@ class CartModel {
       'product': product.toJson(),
       'quantity': quantity.toString(),
       'isExist': isExist,
-      'time': time,
+      // 'time': time,
     };
   }
 }
