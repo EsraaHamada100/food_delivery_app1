@@ -3,11 +3,11 @@ import 'package:food_delivery_app/resources/font_weight_manager.dart';
 
 class BigText extends StatelessWidget {
   final String text;
-  Color color;
-  double size;
-  TextOverflow overflow;
+  final Color color;
+  final double size;
+  final TextOverflow overflow;
 
-  BigText({
+  const BigText({
     Key? key,
     required this.text,
     // this is the mainBlackColor but I can't but variable here

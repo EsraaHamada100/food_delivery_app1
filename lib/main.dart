@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery_app/pages/auth/sign_up_page.dart';
 import 'package:get/get.dart';
 
 import 'controllers/cart_controller.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          // home:  MainFoodPage(),
+          // home:  SignUpPage(),
           initialRoute: RouteHelper.getSplashPage(),
           getPages: RouteHelper.routes,
         );

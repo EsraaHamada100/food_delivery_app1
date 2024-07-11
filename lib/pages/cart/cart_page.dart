@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/controllers/auth_controller.dart';
 import 'package:food_delivery_app/controllers/cart_controller.dart';
 import 'package:food_delivery_app/pages/cart/cart_item_widget.dart';
 import 'package:food_delivery_app/resources/app_values.dart';
@@ -81,7 +82,12 @@ class CartPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                cartController.checkOut();
+                if(Get.find<AuthController>().userLoggedIn()){
+                  cartController.checkOut();
+                }else {
+                  Get.offAllNamed(RouteHelper.getSignInPage());
+                }
+
               },
               child: Container(
                 padding: EdgeInsets.all(AppSize.s20),
